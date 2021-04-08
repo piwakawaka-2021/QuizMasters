@@ -1,19 +1,18 @@
 import React from 'react'
 
-import Nav from './Nav'
-import Home from './Home'
+import Board from './Board'
 
 function App () {
   return (
     <>
       <div className='title'>
-        <img src='/images/color_earth.gif' />
+
         <h1>Ridiculous questions and ridiculous answers</h1>
+        <h2>Quiz Board</h2>
       </div>
       {/* This 'main' div is only for styling (so we can use flexbox) */}
       <div className='main'>
-        <Nav />
-        <Home />
+        <Board/>
       </div>
     </>
   )
