@@ -15,8 +15,8 @@ body {
 
 .game_board {
   display: grid;
-  grid-template-columns:repeat(3, minmax(150px, 1fr));
-  grid-template-rows:repeat(3,minmax(150px, 1fr));
+  grid-template-columns:repeat(3, minmax(300px, 1fr));
+  grid-template-rows:repeat(3,minmax(300px, 1fr));
   background-color: white;
   margin: auto;
 }
@@ -24,9 +24,13 @@ body {
 .card {
 
   border: 5px solid red;
-  width: 300px;
+  width: 500px;
   height: 300px;
   grid-gap: 8px 8px;
   cursor: pointer;
 
+}
+
+li:hover {
+  color: red
 }

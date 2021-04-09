@@ -1,23 +1,18 @@
 import React, {useState} from 'react'
-import {link} from 'react'
 
-
-
-const Card = (props) => {
+const Card9 = (props) => {
   let questionText = Object.values(props)
   let singleQuestion = questionText[0].questionText
- 
+
   let answers = questionText[0].answerOptions
   console.log(answers)
 
   const [card, setCard] = useState(singleQuestion)
-
-
   function cardClick()  {
     setCard(answers.map(answer => {
       return (
         <ul>
-          <li onClick={() => answerClick()}>
+          <li>
             {answer.answerText}
           </li>
         </ul>
@@ -25,10 +20,6 @@ const Card = (props) => {
       )
     }))
 
-  }
-
-  function answerClick() {
-    setCard("hello")
   }
 
 
@@ -41,5 +32,4 @@ const Card = (props) => {
 }
 
 
- 
-export default Card
+export default Card9

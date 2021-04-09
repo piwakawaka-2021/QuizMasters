@@ -1,5 +1,5 @@
 export default {
-  const questions = [
+   questions: [
     {
         questionText: 'If you dug a hole through the centre of the earth starting from Wellington in New Zealand, which European country would you end up in?',
         answerOptions: [
@@ -72,4 +72,5 @@ export default {
             { answerText: 'A conspiracy', isCorrect: false},
         ],
     },
-]
+],
+}
