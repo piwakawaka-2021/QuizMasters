@@ -1,12 +1,11 @@
 import React, {useState} from 'react'
 
-const Card3 = (props) => {
+const Card3 = ({onCorrect, questions}) => {
 
-  let questionText = Object.values(props)
-  let singleQuestion = questionText[0].questionText
+  let singleQuestion = questions.questionText
+ 
+  let answers = questions.answerOptions
 
-  let answers = questionText[0].answerOptions
-  console.log(answers)
 
   const [card, setCard] = useState(singleQuestion)
   
@@ -28,6 +27,11 @@ const Card3 = (props) => {
   }
 
   function answerClick(evt) {
+
+    if (answers[evt.target.id].isCorrect) {
+      onCorrect()
+    }
+
     // let answerTarget = Object.keys(evt.key)
     console.log(answers[evt.target.id].isCorrect)
     
