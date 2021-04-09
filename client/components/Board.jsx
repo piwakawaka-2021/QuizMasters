@@ -23,7 +23,7 @@ function Board () {
   //   }
   // })
 
-  const doAThing = () => {
+  const increaseCount = () => {
     setCounter(counter + 1)
   }
 
@@ -32,15 +32,15 @@ function Board () {
     <div className="wrapper">
     <div className="game_board">
 
-     <Card onCorrect={doAThing}  questions={questionData[0][0]}/>
-     <Card2 onCorrect={doAThing}  questions={questionData[0][1]}/>
-     <Card3 onCorrect={doAThing}  questions={questionData[0][2]}/>
-     <Card4 onCorrect={doAThing}  questions={questionData[0][3]}/>
-     <Card5 onCorrect={doAThing}  questions={questionData[0][4]}/>
-     <Card6 onCorrect={doAThing}  questions={questionData[0][5]}/>
-     <Card7 onCorrect={doAThing}  questions={questionData[0][6]}/>
-     <Card8 onCorrect={doAThing}  questions={questionData[0][7]}/>
-     <Card9 onCorrect={doAThing} questions={questionData[0][8]}/>
+     <Card onCorrect={increaseCount}  questions={questionData[0][0]}/>
+     <Card2 onCorrect={increaseCount}  questions={questionData[0][1]}/>
+     <Card3 onCorrect={increaseCount}  questions={questionData[0][2]}/>
+     <Card4 onCorrect={increaseCount}  questions={questionData[0][3]}/>
+     <Card5 onCorrect={increaseCount}  questions={questionData[0][4]}/>
+     <Card6 onCorrect={increaseCount}  questions={questionData[0][5]}/>
+     <Card7 onCorrect={increaseCount}  questions={questionData[0][6]}/>
+     <Card8 onCorrect={increaseCount}  questions={questionData[0][7]}/>
+     <Card9 onCorrect={increaseCount} questions={questionData[0][8]}/>
     </div>
     <h2>Score={counter}</h2>
     </div>
