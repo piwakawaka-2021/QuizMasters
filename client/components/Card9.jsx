@@ -8,11 +8,15 @@ const Card9 = (props) => {
   console.log(answers)
 
   const [card, setCard] = useState(singleQuestion)
+
   function cardClick()  {
-    setCard(answers.map(answer => {
+
+
+    setCard(answers.map((answer, i) => {
+     
       return (
         <ul>
-          <li>
+          <li id={i} onDoubleClick={(evt) => answerClick(evt)}>
             {answer.answerText}
           </li>
         </ul>
@@ -22,11 +26,27 @@ const Card9 = (props) => {
 
   }
 
+  function answerClick(evt) {
+    // let answerTarget = Object.keys(evt.key)
+    console.log(answers[evt.target.id].isCorrect)
+    
+    setCard(JSON.stringify(answers[evt.target.id].isCorrect))
+   
+  }
+
+  function question (evt) {
+    evt.preventDefault()
+    setCard(singleQuestion)
+  }
+
+
+
 
   return (
-    <div onClick={() => cardClick()} className="card">
+    <div onContextMenu={(evt) => question(evt) } onClick={() => cardClick()} className="card">
       
       <h1>{card}</h1>
+
     </div>
   )
 }
